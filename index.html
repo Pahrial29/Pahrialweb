@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - BIO PAHRIAL</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    .topnav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+      padding: 15px 0;
+    }
+    .topnav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .topnav a.active {
+      color: #00ff88;
+      border-bottom: 2px solid #00ff88;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 2.2em;
+      color: #00ff88;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+    header .icon-hacker {
+      font-size: 2.8em;
+      color: #00ff88;
+      margin-top: 10px;
+    }
+    .home {
+      display: flex;
+      justify-content: center;
+      padding: 80px 20px;
+      
+      text-align: center;
+    }
+    .home-text {
+      max-width: 600px;
+    }
+    .home-text h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .home-text h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #00ff88;
+    }
+    .home-text p {
+      margin: 20px 0;
+      color: #ccc;
+      white-space: pre-line;
+      line-height: 1.5;
+    }
+    .socials a {
+      margin: 0 10px;
+      font-size: 1.5em;
+      color: #00ff88;
+      text-decoration: none;
+    }
+    .download-btn {
+      margin-top: 20px;
+      background: #00ff88;
+      color: black;
+      padding: 10px 25px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .typed-text {
+      display: inline;
+      border-right: 2px solid #00ff88;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .about-section, .service-card, .skill-card {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .about-section.show, .service-card.show, .skill-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .skill-bar {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 10px;
+      margin-bottom: 20px;
+    }
+    .skill-bar-fill {
+      background: #00ff88;
+      height: 100%;
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="topnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Service</a>
+    <a href="#top">Contact</a>
+  </div>
+
+  <header>
+    <h1>Welcome too my web</h1>
+    <i class="fas fa-user-secret icon-hacker"></i>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-text">
+      <h2>Hey I'm <span style="color: #00ff88;">Pahrial</span></h2>
+      <h1><span class="typed-text" id="typed"></span></h1>
+      <p>
+Kode adalah bahasa kreativitas yang tertata rapi.
+Setiap baris membawa ide menjadi nyata.
+Teknologi dijalankan dengan ketelitian dan seni.
+Membangun masa depan lewat logika dan imajinasi.
+      </p>
+      <div class="socials">
+        <a href="https://instagram.com/bio_pahrial" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/share/1ByEbvypps/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/6283894972058" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <button class="download-btn">Download CV</button>
+    </div>
+  </section>
+
+  <section class="about-section" id="about" style="padding: 60px 20px; background: #1a1a1a; text-align: center;">
+    <h2 style="color: #00ff88; font-size: 2em; margin-bottom: 20px;">About Me</h2>
+    <h3 style="color: #00ff88; font-size: 1.5em; margin-bottom: 15px;">Who Am I?</h3>
+    <p style="max-width: 600px; margin: 0 auto 40px auto; color: #ccc; line-height: 1.6;">
+      I'm a passionate developer and designer with a keen eye for detail and a drive for creating innovative digital solutions. 
+      With expertise in web development, UI/UX design, and content creation, I bring ideas to life through code and creativity.
+    </p>
+  </section>
+
+  <section id="skills" style="padding: 60px 20px; background: #1a1a1a; text-align: center;">
+    <h2 style="color: #00ff88; font-size: 2em; margin-bottom: 30px;">My Skills</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+      <div class="skill-card" style="background: #222; padding: 25px; border-radius: 15px; width: 280px;">
+        <i class="fas fa-car" style="font-size: 2em; color: #00ff88;"></i>
+        <h3 style="color: #00ff88; margin: 10px 0;">Frontend Development</h3>
+        <p><span style="color: #00ff88; font-weight: bold;">HTML</span> <span style="float:right; color: #00ff88; font-weight: bold;">95%</span></p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+        <p><span style="color: #00ff88; font-weight: bold;">CSS</span> <span style="float:right; color: #00ff88; font-weight: bold;">80%</span></p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+        <p><span style="color: #00ff88; font-weight: bold;">JavaScript</span> <span style="float:right; color: #00ff88; font-weight: bold;">70%</span></p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+      </div>
+      <div class="skill-card" style="background: #222; padding: 25px; border-radius: 15px; width: 280px;">
+        <i class="fas fa-database" style="font-size: 2em; color: #00ff88;"></i>
+        <h3 style="color: #00ff88; margin: 10px 0;">Backend Development</h3>
+        <p><span style="color: #00ff88; font-weight: bold;">PHP</span> <span style="float:right; color: #00ff88; font-weight: bold;">60%</span></p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 60%;"></div></div>
+        <p><span style="color: #00ff88; font-weight: bold;">Node.js</span> <span style="float:right; color: #00ff88; font-weight: bold;">60%</span></p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 60%;"></div></div>
+        <p><span style="color: #00ff88; font-weight: bold;">Python</span> <span style="float:right; color: #00ff88; font-weight: bold;">80%</span></p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding: 60px 20px; background: #111; text-align: center;">
+    <h2 style="color: #00ff88; font-size: 2em; margin-bottom: 30px;">My Services</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+      <div class="service-card" style="background: #222; padding: 30px 20px; border-radius: 15px; width: 250px;">
+        <i class="fas fa-code" style="font-size: 2em; color: #00ff88;"></i>
+        <h3 style="color: #00ff88; margin: 15px 0;">Web Development</h3>
+        <p style="color: #ccc;">Custom website development using modern technologies. Responsive design, optimized performance, and clean code.</p>
+        <p style="color: #00ff88; font-weight: bold;">Starting at Rp50.000</p>
+      </div>
+      <div class="service-card" style="background: #222; padding: 30px 20px; border-radius: 15px; width: 250px;">
+        <i class="fas fa-paint-brush" style="font-size: 2em; color: #00ff88;"></i>
+        <h3 style="color: #00ff88; margin: 15px 0;">UI/UX Design</h3>
+        <p style="color: #ccc;">User-centered design, wireframing, prototyping, and intuitive interface design.</p>
+        <p style="color: #00ff88; font-weight: bold;">Starting at Rp50.000</p>
+      </div>
+      <div class="service-card" style="background: #222; padding: 30px 20px; border-radius: 15px; width: 250px;">
+        <i class="fas fa-bullhorn" style="font-size: 2em; color: #00ff88;"></i>
+        <h3 style="color: #00ff88; margin: 15px 0;">Digital Marketing</h3>
+        <p style="color: #ccc;">SEO, social media, and content marketing to grow your online presence.</p>
+        <p style="color: #00ff88; font-weight: bold;">Starting at Rp50.000</p>
+      </div>
+      <div class="service-card" style="background: #222; padding: 30px 20px; border-radius: 15px; width: 250px;">
+        <i class="fas fa-comments" style="font-size: 2em; color: #00ff88;"></i>
+        <h3 style="color: #00ff88; margin: 15px 0;">IT Consulting</h3>
+        <p style="color: #ccc;">Strategic planning, technical architecture, and solution design.</p>
+        <p style="color: #00ff88; font-weight: bold;">Starting at Rp50.000</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const words = ["I'm a PROGRAMER", "I'm Not Hacker"];
+    let i = 0, j = 0;
+    let isDeleting = false;
+    const speed = 100;
+    const target = document.getElementById('typed');
+
+    function type() {
+      const currentWord = words[i];
+      if (isDeleting) {
+        target.textContent = currentWord.substring(0, j--);
+      } else {
+        target.textContent = currentWord.substring(0, j++);
+      }
+
+      if (!isDeleting && j === currentWord.length + 1) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, isDeleting ? speed / 2 : speed);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', type);
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.about-section, .service-card, .skill-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+  <section id="video" style="padding: 60px 20px; background: #1a1a1a; text-align: center;">
+    <h2 style="color: #00ff88; font-size: 2em; margin-bottom: 20px;">My Video</h2>
+    <p style="color: #ccc; margin-bottom: 20px;">Jangan lupa JJ nya bang</p>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <video height="500" controls style="border: 3px solid #00ff88; border-radius: 10px; max-width: 300px;">
+        <source src="video.mp4" type="video/mp4">
+        Browser kamu tidak mendukung pemutar video.
+      </video>
+    </div>
+  </section>
+</body>
+</html>
+
